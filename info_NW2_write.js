@@ -24,7 +24,7 @@ let bun={
       cnt++;
     } 
     if (document.form1.no3.checked) {
-      c[cnt]=2;
+      c[cnt]=3;
       cnt++;
     } 
     if(cnt===0){
