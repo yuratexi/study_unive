@@ -93,16 +93,96 @@ let bun={
         }
         break;
       case 3:
-        m=getrandom(1,4);
+        m=getrandom(1,35);
         switch(m){
-            case 1:q=`FQDN(fully Qualified Domain Name)とは何かを簡潔に説明せよ。`;
-                    a=`トップレベルドメインまで指定されたホスト名`;break;
-            case 2:q=`なぜ「NAPT」では1つのグローバルIPで複数の端末がインターネットに接続できるのか、仕組みを説明せよ【ヒント:ポート番号】`;
-                    a=`送信元IPアドレスだけでなく送信元ポート番号も変換することで、1つのグローバルIPアドレスを複数の端末で共有できる。各端末の通信に異なるポート番号を割り当てることで、どの端末の通信かを識別し、正しく通信を中継できるためである。`;break;
-            case 3:q=`ドメイン名とは何かを簡潔に説明せよ`;
-                    a=`インターネット上でWebサイトやメールアドレスを特定するために用いられる、識別子のこと`;break;  
-            case 4:q=`DMZ(DeMilitarized Zone)とは何かを簡潔に説明せよ`;
-                    a=`外部に公開するサーバを内部ネットワークと分けて設置する安全な中間地帯のこと`;break;    
+            case 1:q=`HTTPリクエストとレスポンスの構造について、メソッドやステータスコードの例も交えて説明しなさい。`;
+                    a=`HTTPリクエストは、メソッド、ヘッダ、ボディから構成される。メソッドには、ページ取得用のGETや、データ送信用のPOSTなどがある。ヘッダは通信の情報を、ボディは送信データを含む。レスポンスには、成功時の200や、ページ未検出の404などのステータスコード、ヘッダ、ボディが含まれる。`;break;
+            case 2:q=`メール送信時にセキュリティ上の問題が発生しうるポイントを、プロトコル（SMTP/POP3）、暗号化（TLS/SSL）、認証方式（SMTP-AUTH等）に触れながら具体的に説明しなさい。`;
+                    a=`SMTPやPOP3は平文通信のため、盗聴や改ざんの危険がある。TLSやSSLで通信を暗号化することで、これを防止できる。また、SMTP-AUTHなどの認証方式を用いることで、正当な利用者のみが送信できるようにし、不正中継やスパムを防ぐことが重要である。`;break;
+            case 3:q=`rcp（Remote Copy Protocol）とは何かを簡潔に説明せよ`;
+                    a=`UNIXで使用された古いリモートコピー方式。cpコマンドに似た形式で、コマンドベースの転送。認証・通信ともに暗号化なし。現在では使用されず、scpへ移行`;break;  
+            case 4:q=`scp（Secure Copy Protocol）とは何かを簡潔に説明せよ`;
+                    a=`rcpの後継であり、安全なファイル転送手段。SSHを利用して暗号化された通信を行う。安全性が高く、広く使用されている`;break; 
+            case 5:q=`ftp（File Transfer Protocol）とは何かを簡潔に説明せよ`;
+                    a=`初期からある代表的なファイル転送手法。ポート21で制御、ポート20などでデータを転送。対話型でコマンドベースの操作(ログイン不要)。anonymousFTPにより匿名利用も可能。昔はよく使われていたが、暗号化がないため非推奨。`;break;   
+            case 6:q=`SMTPとは何かを簡潔に説明せよ`;
+                    a=`Simple Mail Transfer Protocolの略で、電子メールを送信するためのプロトコル。TCPのポート番号25を利用する。`;break;   
+            case 7:q=`MUAとは何かを簡潔に説明せよ`;
+                    a=`SMTPにおけるクライアント側のこと`;break;  
+            case 8:q=`MTAとは何かを簡潔に説明せよ`;
+                    a=`SMTPにおけるサーバ側のこと`;break;  
+            case 9:q=`POP3とは何かを簡潔に説明せよ`;
+                    a=`Post Office Protocol version 3の略で、電子メールをメールサーバーからクライアント端末に取り出すための通信プロトコル。ユーザ認証をしてからメールを取り出す`;break;   
+            case 10:q=`IMAP4とは何かを簡潔に説明せよ`;
+                    a=`Internet MessageAccess Protocol version 4の略で、電子メールをサーバ上で管理・閲覧するプロトコル。メールはサーバに保管されるため、色々な場所から同じメールにアクセスできるが、サーバの負荷が重い。`;break; 
+            case 11:q=`MIMEとは何かを簡潔に説明せよ`;
+                    a=`Multipurpose Internet Mail Extensionsの略で、様々なフォーマットをASCII文字列に変換するための規格。`;break;         
+            case 12:q=`WWWとは何かを簡潔に説明せよ`;
+                    a=`World Wide Webの略で、世界中の文書をリンクでつなげる仕組み。`;break;   
+            case 13:q=`URLとは何かを簡潔に説明せよ`;
+                    a=`Uniform Resource Locatorの略で、インターネット上のリソースの場所を表す「住所」のこと。`;break;      
+            case 14:q=`URIとは何かを簡潔に説明せよ`;
+                    a=`Uniform Resource Identifierの略で、URLを含むより広い概念(識別子)のこと。`;break;  
+            case 15:q=`HTTPとは何かを簡潔に説明せよ`;
+                    a=`Hyper Text Transfer Protocolの略で、Webサーバと情報のやり取りを行うための通信プロトコル。ポート番号は80(TCP)`;break;   
+            case 16:q=`Cacheとは何かを簡潔に説明せよ`;
+                    a=`Webページの情報をブラウザ側に保存して、ブラウザのページの読み込みを早くするためのもの`;break;         
+            case 17:q=`HTTPとは何かを簡潔に説明せよ`;
+                    a=`Hyper Text Transfer Protocolの略で、Webサーバと情報のやり取りを行うための通信プロトコル。ポート番号は80(TCP)`;break;  
+            case 18:q=`Linuxにおいて、自分のIPアドレスを確認するコマンドは？`;
+                    a=`ip a`;break;  
+            case 19:q=`Linuxにおいて、ルート情報を確認するコマンドは？`;
+                    a=`ip r`;break;  
+            case 20:q=`Linuxにおいて、通信経路を確認するコマンドは？(google.comを例に)`;
+                    a=`traceroute google.com`;break;  
+            case 21:q=`Linuxにおいて、TCP/UDPのポートを一覧表示するコマンドは？`;
+                    a=`ss -tuln`;break;  
+            case 22:q=`Linuxにおいて、HTTPでアクセスしてHTMLを取得するコマンドは？(http://example.comを例に)`;
+                    a=`curl http://example.com`;break;  
+            case 23:q=`Linuxにおいて、ドメイン名google.comのIPアドレスを取得するコマンドは？`;
+                    a=`dig google.com`;break;  
+            case 24:q=`WSL2のUbuntuにおいて、ip linkを実行した際に表示される情報に含まれる用語にうち、eth0の役割を簡潔に説明せよ`;
+                    a=`仮想的なイーサネットネットワークインターフェースの名前。WSL2ではホストとの通信に使われる。`;break;  
+            case 25:q=`WSL2のUbuntuにおいて、ip linkを実行した際に表示される情報に含まれる用語にうち、loの役割を簡潔に説明せよ`;
+                    a=`ループバックインターフェースの名前。自分自身との通信（127.0.0.1など）に使用される仮想インターフェース。`;break;   
+            case 26:q=`WSL2のUbuntuにおいて、ip linkを実行した際に表示される情報に含まれる用語にうち、BROADCASTの役割を簡潔に説明せよ`;
+                    a=`ブロードキャスト通信が可能なインターフェースであることを示す。ネットワーク内の全端末に同時送信できる。`;break;  
+            case 27:q=`WSL2のUbuntuにおいて、ip linkを実行した際に表示される情報に含まれる用語にうち、MULTICASTの役割を簡潔に説明せよ`;
+                    a=`マルチキャスト通信が可能なインターフェースであることを示す。特定グループの複数端末への同時通信に使われる。`;break;  
+            case 28:q=`WSL2のUbuntuにおいて、ip linkを実行した際に表示される情報に含まれる用語にうち、UPの役割を簡潔に説明せよ`;
+                    a=`インターフェースが有効（アクティブ）である状態を示す。通信ができる状態。`;break;  
+            case 29:q=`WSL2のUbuntuにおいて、ip linkを実行した際に表示される情報に含まれる用語にうち、mtu 1500の役割を簡潔に説明せよ`;
+                    a=`MTU（最大転送単位）は一度に送信可能なパケットの最大サイズ。1500バイトは一般的なイーサネットの標準。`;break;  
+            case 30:q=`WSL2のUbuntuにおいて、ip linkを実行した際に表示される情報に含まれる用語にうち、link/etherの役割を簡潔に説明せよ`;
+                    a=`イーサネットリンクの種類を示す（ここではイーサネット）。後ろにはMACアドレスが続く。`;break; 
+            case 31:q=`WSL2のUbuntuにおいて、ip linkを実行した際に表示される情報に含まれる用語にうち、MACアドレスの役割を簡潔に説明せよ`;
+                    a=`ネットワークインターフェースの固有の物理アドレス（例:00:1a:2b:3c:4d:5e）。通信機器の識別に使われる。`;break; 
+            case 32:q=`WSL2のUbuntuにおいて、ip linkを実行した際に表示される情報に含まれる用語にうち、LOOPBACKの役割を簡潔に説明せよ`;
+                    a=`ループバック機能を持つインターフェースであることを示す。外部通信を行わず、自端末内でのテストに使用される。`;break;    
+            case 33:q=`WSL2のUbuntuにおいて、ip linkを実行した際に表示される情報に含まれる用語にうち、qlenの役割を簡潔に説明せよ`;
+                    a=`キュー長（Queue Length）を示す。送信待ちのパケット数の最大値で、トラフィック制御に関係する。`;break;  
+            case 34:q=`次の出力は、WSL2上で ip link を実行したときの一部である。 <br>
+                      5: eth0: <BROADCAST,MULTICAST,UP> mtu 1500 group default qlen 1<br>
+                          link/ether 00:1c:42:c4:6e:e6 <br>
+                      1: lo: <LOOPBACK,UP> mtu 1500 group default qlen 1<br>
+                          link/loopback 00:00:00:00:00:00 <br>
+                      上記のうち、外部と通信を行うためのインターフェースはどれですか？理由とともに答えなさい。`;
+                    a=`外部と通信を行うインターフェース:eth0<br>
+                        eth0 は仮想的なイーサネットインターフェースで、<BROADCAST,MULTICAST,UP> と表示されており、外部との通信が可能な状態になっているため。`;break;  
+            case 34:q=`次の出力は、WSL2上で ip link を実行したときの一部である。 <br>
+                      5: eth0: <BROADCAST,MULTICAST,UP> mtu 1500 group default qlen 1<br>
+                          link/ether 00:1c:42:c4:6e:e6 <br>
+                      1: lo: <LOOPBACK,UP> mtu 1500 group default qlen 1<br>
+                          link/loopback 00:00:00:00:00:00 <br>
+                      'mtu 1500' は何を意味しますか？`;
+                    a=`「Maximum Transmission Unit（最大転送単位）」を意味し、一度に送信できるパケットの最大サイズが1500バイトであることを示す。`;break; 
+            case 35:q=`次の出力は、WSL2上で ip link を実行したときの一部である。 <br>
+                      5: eth0: <BROADCAST,MULTICAST,UP> mtu 1500 group default qlen 1<br>
+                          link/ether 00:1c:42:c4:6e:e6 <br>
+                      1: lo: <LOOPBACK,UP> mtu 1500 group default qlen 1<br>
+                          link/loopback 00:00:00:00:00:00 <br>
+                      'link/ether' と 'link/loopback' の違いについて説明しなさい。`;
+                    a=`link/ether はイーサネットタイプのインターフェースを示し、MACアドレス（例：00:1c:42:c4:6e:e6）を持ち、物理または仮想ネットワークを介した外部通信に使用される。それに対し、link/loopback はループバックインターフェースを示し、MACアドレスは00:00:00:00:00:00のように仮のものが使われ、外部とは通信せず、自端末内での通信（127.0.0.1）専用となっている。`;break; 
         }
         break;
         default:

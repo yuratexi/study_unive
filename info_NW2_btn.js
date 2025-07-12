@@ -89,9 +89,10 @@ function getrandom( min, max ) {
               case 14:q=`WSLがネットワーク学習に適している理由として適切でないものはどれか？`;a=`WindowsとMac間の通信を直接制御できる`;s1=`Linuxの定番ネットワークツールが使える`;s2=`仮想マシンよりも高速かつ軽量である`;s3=`Dockerと仮想ネットワークの基礎を学べる`;atxt=``;break;
               case 15:q=`vEthernetインターフェースの主な役割として正しいものはどれか？`;a=`仮想マシンとホスト間でのネットワーク通信を中継する`;s1=`LANケーブル接続時に自動でインターネットに接続する`;s2=`Webブラウザのキャッシュを管理する`;s3=`Bluetooth機器との通信を担当する仮想NIC`;atxt=``;break;
               case 16:q=`次のコマンドの目的として正しいものはどれか？ sudo ip addr add 192.168.1.100/24 dev eth0`;a=`eth0 インターフェースに静的IPアドレスを割り当てる`;s1=`eth0 インターフェースを削除する`;s2=`ルート証明書を追加する`;s3=`DNSの設定を初期化する`;atxt=``;break;
-
-              
-
+              case 17: q = `192.168.0.2というIPアドレスを持つ機器とネットワーク通信ができるかどうかを確認するコマンドはどれか？`;a=`ping 192.168.0.2`;s1=`connect 192.168.0.2`;s2=`tracepath 192.168.0.2`;s3=`netstat 192.168.0.2`;atxt=``;break;
+              case 18:q=`windowsにおいて、pingコマンドを2回だけ送信するコマンドはどれか？`;a=`ping -n 2 192.168.3.1`;s1=`ping -c 2 192.168.3.1`;s2=`ping --count=2 192.168.3.1`;s3=`ping /n 2 192.168.3.1`;atxt=``;break;
+              case 19:q=`macにおいて、pingコマンドを2回だけ送信するコマンドはどれか？`;a=`ping -c 2 192.168.3.1`;s1=`ping -n 2 192.168.3.1`;s2=`ping /c 2 192.168.3.1`;s3=`ping --count 2 192.168.3.1`;atxt=``;break;
+              case 20:q=`windowsにおいて、pingコマンドを2回だけ送信し、結果をファイルに保存するコマンドはどれか？`;a=`ping -n 2 192.168.3.1 > result.txt`;s1=`ping -c 2 192.168.3.1 > result.txt`;s2=`ping -n 2 192.168.3.1 >> result.txt`;s3=`ping -n 2 192.168.3.1 > result`;atxt=``;break;
           }
           break;
         case 5116:
