@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ゴリ押しアルゴリズムで解く『行列式電卓くん！』</title>
+    <link rel="stylesheet" href="kanzi.css">
+    <link rel="stylesheet" href="det.css">
+  </head>
+  <p>パンくずリスト    ホーム > <b>ゴリ押しアルゴリズムで解く『行列式電卓くん！』</b></p>
+  <h1>ゴリ押しアルゴリズムで解く『行列式電卓くん！』</h1>
+  <div class="area1" id="area1">
+
+  </div>
+  <div id="formula">
+    <input type="number" value="0" class="input" id="a"><input type="number" value="0" class="input" id="b"><input type="number" value="0" class="input" id="c"><br>
+    <input type="number" value="0" class="input" id="d"><input type="number" value="0" class="input" id="e"><input type="number" value="0" class="input" id="f"><br>
+    <input type="number" value="0" class="input" id="g"><input type="number" value="0" class="input" id="h"><input type="number" value="0" class="input" id="i"><br><br>
+  </div>
+
+  <br>
+  <input type="button" value="計算" id="btn1">
+  <div id="console"></div>
+  <p>--行列のサイズ設定--</p>
+  <form name="select">
+    <input type="radio" name="select" id="f2" onchange="change()">2次の正方行列<br>
+    <input type="radio" name="select" id="f3" onchange="change()" checked>3次の正方行列<br>
+    <input type="radio" name="select" id="f4" onchange="change()">4次の正方行列
+  </form>
+  <br>
+  <form name="debug">
+    <label><input type="checkbox" id="debug" name="debug">test</label>    
+  </form>
+  <p>何か不具合があったら庭まで</p>
+  <p>---問題履歴(過去ログ)---</p>
+  <p id="log">ここには何もないようだ...</p>
+  </form>
+  <p>---バージョン情報---</p>
+  <p>2023 6/6  </p>
+  <h2>---他のリンクー---</h2>
+  <nav>
+    <ul class="rinku">
+          <li><a href="linearalgebra.html">ねこの線形代数1</a></li>
+          <li><a href="det.html">ゴリ押しアルゴリズムで解く『行列式電卓くん！』</a></li>
+          <li><a href="info_NW2.html">フラウィーの情報ネットワーク2勉強コーナー</a></li>
+    </ul>
+</nav>
+  <body>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="det.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+</html>
