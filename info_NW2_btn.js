@@ -313,7 +313,7 @@ $(function (){
 });
 
   
-  window.document.onkeydown = function(event){
+  /*window.document.onkeydown = function(event){
     if (event.key === 'Enter') {
       if(btn1.disabled===false){
         btn1.disabled = true;
@@ -325,7 +325,7 @@ $(function (){
         ans();
       }
     }
-  }
+  }*/
 
   document.getElementById("form1").onkeypress = (e) => {
   // form1に入力されたキーを取得
