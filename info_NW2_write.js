@@ -23,6 +23,10 @@ let bun={
       c[cnt]=2;
       cnt++;
     } 
+    if (document.form1.no3.checked) {
+      c[cnt]=2;
+      cnt++;
+    } 
     if(cnt===0){
       q=`範囲を選択してね！`;
       btn2.disabled = true;
@@ -76,6 +80,19 @@ let bun={
         }
         break;
       case 2:
+        m=getrandom(1,4);
+        switch(m){
+            case 1:q=`FQDN(fully Qualified Domain Name)とは何かを簡潔に説明せよ。`;
+                    a=`トップレベルドメインまで指定されたホスト名`;break;
+            case 2:q=`なぜ「NAPT」では1つのグローバルIPで複数の端末がインターネットに接続できるのか、仕組みを説明せよ【ヒント:ポート番号】`;
+                    a=`送信元IPアドレスだけでなく送信元ポート番号も変換することで、1つのグローバルIPアドレスを複数の端末で共有できる。各端末の通信に異なるポート番号を割り当てることで、どの端末の通信かを識別し、正しく通信を中継できるためである。`;break;
+            case 3:q=`ドメイン名とは何かを簡潔に説明せよ`;
+                    a=`インターネット上でWebサイトやメールアドレスを特定するために用いられる、識別子のこと`;break;  
+            case 4:q=`DMZ(DeMilitarized Zone)とは何かを簡潔に説明せよ`;
+                    a=`外部に公開するサーバを内部ネットワークと分けて設置する安全な中間地帯のこと`;break;    
+        }
+        break;
+      case 3:
         m=getrandom(1,4);
         switch(m){
             case 1:q=`FQDN(fully Qualified Domain Name)とは何かを簡潔に説明せよ。`;
