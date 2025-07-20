@@ -162,24 +162,24 @@ let bun={
             case 33:q=`WSL2のUbuntuにおいて、ip linkを実行した際に表示される情報に含まれる用語にうち、qlenの役割を簡潔に説明せよ`;
                     a=`キュー長（Queue Length）を示す。送信待ちのパケット数の最大値で、トラフィック制御に関係する。`;break;  
             case 34:q=`次の出力は、WSL2上で ip link を実行したときの一部である。 <br>
-                      5: eth0: <BROADCAST,MULTICAST,UP> mtu 1500 group default qlen 1<br>
+                      5: eth0: &ltBROADCAST,MULTICAST,UP&gt; mtu 1500 group default qlen 1<br>
                           link/ether 00:1c:42:c4:6e:e6 <br>
-                      1: lo: <LOOPBACK,UP> mtu 1500 group default qlen 1<br>
+                      1: lo: &ltLOOPBACK,UP&gt; mtu 1500 group default qlen 1<br>
                           link/loopback 00:00:00:00:00:00 <br>
                       上記のうち、外部と通信を行うためのインターフェースはどれですか？理由とともに答えなさい。`;
                     a=`外部と通信を行うインターフェース:eth0<br>
-                        eth0 は仮想的なイーサネットインターフェースで、<BROADCAST,MULTICAST,UP> と表示されており、外部との通信が可能な状態になっているため。`;break;  
+                        eth0 は仮想的なイーサネットインターフェースで、&ltBROADCAST,MULTICAST,UP&gt; と表示されており、外部との通信が可能な状態になっているため。`;break;  
             case 34:q=`次の出力は、WSL2上で ip link を実行したときの一部である。 <br>
-                      5: eth0: <BROADCAST,MULTICAST,UP> mtu 1500 group default qlen 1<br>
+                      5: eth0: &ltBROADCAST,MULTICAST,UP&gt; mtu 1500 group default qlen 1<br>
                           link/ether 00:1c:42:c4:6e:e6 <br>
-                      1: lo: <LOOPBACK,UP> mtu 1500 group default qlen 1<br>
+                      1: lo: &ltLOOPBACK,UP&gt; mtu 1500 group default qlen 1<br>
                           link/loopback 00:00:00:00:00:00 <br>
                       'mtu 1500' は何を意味しますか？`;
                     a=`「Maximum Transmission Unit（最大転送単位）」を意味し、一度に送信できるパケットの最大サイズが1500バイトであることを示す。`;break; 
             case 35:q=`次の出力は、WSL2上で ip link を実行したときの一部である。 <br>
-                      5: eth0: <BROADCAST,MULTICAST,UP> mtu 1500 group default qlen 1<br>
+                      5: eth0: &ltBROADCAST,MULTICAST,UP&gt; mtu 1500 group default qlen 1<br>
                           link/ether 00:1c:42:c4:6e:e6 <br>
-                      1: lo: <LOOPBACK,UP> mtu 1500 group default qlen 1<br>
+                      1: lo: &ltLOOPBACK,UP&gt; mtu 1500 group default qlen 1<br>
                           link/loopback 00:00:00:00:00:00 <br>
                       'link/ether' と 'link/loopback' の違いについて説明しなさい。`;
                     a=`link/ether はイーサネットタイプのインターフェースを示し、MACアドレス（例：00:1c:42:c4:6e:e6）を持ち、物理または仮想ネットワークを介した外部通信に使用される。それに対し、link/loopback はループバックインターフェースを示し、MACアドレスは00:00:00:00:00:00のように仮のものが使われ、外部とは通信せず、自端末内での通信（127.0.0.1）専用となっている。`;break; 
